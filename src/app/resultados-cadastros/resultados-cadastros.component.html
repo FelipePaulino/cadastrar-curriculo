@@ -1,0 +1,38 @@
+<h2>Pessoas Cadastradas</h2>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Cargo</th>
+        <th>Cidade</th>
+    </tr>
+    <tr *ngFor="let cadastrado of cadastrados">
+        <td>{{cadastrado.id}}</td>
+        <td>{{cadastrado.nome}}</td>
+        <td>{{cadastrado.email}}</td>
+        <td>{{cadastrado.celular}}</td>
+        <td>{{cadastrado.cargo}}</td>
+        <td>{{cadastrado.cidade}}</td>
+    </tr>
+    <a [routerLink]="['']">Voltar</a>
+</table>
+
+
+
+ <section class="simplifique">
+        <h4><b>Simplifique</b> sua busca por um emprego novo!</h4>
+        <p>Você tem acesso à<b> todas as vagas</b> do site <b>envio ilimitado</b> de currículo.</p>
+    </section>
+    <section class="importante">
+    <p><b>importante:</b>* 
+    Vivamus imperdiet scelerisque maximus. Etiam lacinia lacus id orci bibendum, quis consectetur mi porttitor. Nulla efficitur ligula diam, ac tincidunt metus lacinia sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae facilisis est, vel pharetra elit. Phasellus erat tortor, vestibulum sed fermentum et, rutrum pharetra lacus. Donec pretium, nisl at pretium mattis, augue metus facilisis lectus, ut ornare libero felis nec augue. Ut ullamcorper auctor tempor. Fusce at condimentum ligula.</p>
+    <p>Copyright © 1998-2019 Empregos.com.br. Todos os direitos reservados.</p>
+        </section>
+        <footer>
+            Experimentar por 7 dias
+        </footer>
+    
+    
+    

@@ -1,0 +1,12 @@
+{
+  "cadastros": [
+    {
+      "nome": "Felipe Paulino",
+      "email": "felipe@newqi.com.br",
+      "celular": "99576477473274234",
+      "cargo": "Farmacêutico",
+      "cidade": "Franco da Rocha",
+      "id": 1
+    }
+  ]
+}

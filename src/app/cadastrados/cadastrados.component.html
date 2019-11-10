@@ -1,0 +1,41 @@
+<p class="anuncie">Anuncie seu currículo</p>
+<form #form="ngForm">
+<label>Nome*</label><input type="text" [(ngModel)]="cadastrado.nome" name="nome" placeholder="Seu nome" required><br>
+<label>E-mail*</label><input type="text" [(ngModel)]="cadastrado.email" name="email" placeholder="email@exemplo.com.br" required email><br>
+<label>Celular*</label><input type="text" [(ngModel)]="cadastrado.celular" name="celular" placeholder="Seu telefone" required><br>
+<div class="box-cidades">
+<label>Cidade*</label><input type="text" ng-click="remove(cidade.Descricao)" placeholder="Selecione a cidade" (keyup)="ListaCidades($event.target.value)" [(ngModel)]="cadastrado.cidade" name="cidade"  required>
+<div class="box-lista-cidades">
+<div *ngFor="let cidade of cidades"class="box-cidades--individual"> 
+    <span *ngIf="editedCidade" (click)="SelecaoCidade($event.target.textContent)" [ngClass]="classToDiv">{{cidade.Descricao}}</span>
+</div>
+</div>
+</div><br>
+<div class="box-cargos">
+    <label>Cargos*</label><input type="text" (keyup)="ListaCargos($event.target.value)" placeholder="Selecione o cargo"  [(ngModel)]="cadastrado.cargo" name="cargo"    required>
+    <div class="box-lista-cargos">
+        <div *ngFor="let cargo of cargos" class="box-cargos--individual">
+            <span *ngIf="editedCargo" (click)="SelecaoCargo($event.target.textContent)">{{cargo.Descricao}}</span>
+        </div>
+    </div>
+</div>
+
+
+<p>*campos obrigatórios</p>
+
+<button type="button" [disabled]="form.invalid" (click)="cadastrar()">Continuar Cadastro</button>
+</form>
+<section class="simplifique">
+    <h4><b>Simplifique</b> sua busca por um emprego novo!</h4>
+    <p>Você tem acesso à<b> todas as vagas</b> do site <b>envio ilimitado</b> de currículo.</p>
+</section>
+<section class="importante">
+<p><b>importante:</b>* 
+Vivamus imperdiet scelerisque maximus. Etiam lacinia lacus id orci bibendum, quis consectetur mi porttitor. Nulla efficitur ligula diam, ac tincidunt metus lacinia sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae facilisis est, vel pharetra elit. Phasellus erat tortor, vestibulum sed fermentum et, rutrum pharetra lacus. Donec pretium, nisl at pretium mattis, augue metus facilisis lectus, ut ornare libero felis nec augue. Ut ullamcorper auctor tempor. Fusce at condimentum ligula.</p>
+<p>Copyright © 1998-2019 Empregos.com.br. Todos os direitos reservados.</p>
+    </section>
+    <footer>
+        Experimentar por 7 dias
+    </footer>
+
+
